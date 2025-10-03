@@ -5,9 +5,9 @@
 "scripts": {
   "dev": "tsnd --respawn --clear src/app.ts",
   "build": "rimraf ./dist && tsc",
-  "start": "npm run prisma:migrate:prod && node dist/app.js",
-  "prisma:migrate:prod": "prisma migrate deploy"
-},
+  "start": "npm run prisma:deploy && node dist/app.js",
+  "prisma:deploy": "prisma migrate deploy && prisma generate"
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",
